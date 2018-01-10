@@ -4,7 +4,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+// const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: __dirname + "/source/index.js",  // 入口文件
@@ -74,12 +74,12 @@ module.exports = {
     },
     plugins: [
         // 清除文件的插件，第一个参数为要清楚的文件，第二参数是选项
-        new CleanWebpackPlugin(["build/*.css", "build/*.js"], {
-            exclude: ["index.html"],    // 不清除的文件
-            verbose: true,              // 打印日日志到控制台
-            dry: false,                 // 是否测试，true假删除，false真删除
-        }),
-        new webpack.BannerPlugin('版权所有，翻版必究'),    // 指定banner信息
+        // new CleanWebpackPlugin(["build/*.css", "build/*.js"], {
+        //     exclude: ["index.html"],    // 不清除的文件
+        //     verbose: true,              // 打印日日志到控制台
+        //     dry: false,                 // 是否测试，true假删除，false真删除
+        // }),
+        // new webpack.BannerPlugin('版权所有，翻版必究'),    // 指定banner信息
         new HtmlWebpackPlugin({
             template: __dirname + "/source/index.html"  // 指定html模版文件
         }),

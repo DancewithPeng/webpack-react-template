@@ -49,6 +49,6 @@ module.exports = {
         }),
         new webpack.optimize.UglifyJsPlugin(),          // 压缩代码插件开发阶段不建议打开，发布建议打开
         new webpack.optimize.OccurrenceOrderPlugin(),   // 自动分配ID插件
-        new ExtractTextPlugin("styles-[hash].css"),     // 分离css和js文件的插件
+        new ExtractTextPlugin("main-[hash].css"),     // 分离css和js文件的插件
     ],
 };
